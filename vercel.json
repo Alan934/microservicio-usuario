@@ -3,14 +3,10 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "dist/**"
-        ]
-      }
+      "use": "@vercel/node"
     }
   ],
+  "buildCommand": "prisma generate && npm run build",
   "routes": [
     {
       "src": "/(.*)",
@@ -25,5 +21,3 @@
     }
   ]
 }
-
-  
